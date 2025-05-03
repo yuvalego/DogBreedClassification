@@ -7,7 +7,7 @@ from fastapi import FastAPI, Request
 
 # Load and prepare the TFLite model
 def load_compact_model():
-    model_path = "/Users/yuvalsavaryegolandesman/Desktop/deploy_model.tflite"
+    model_path = "/Users/yuvalsavaryegolandesman/Desktop/DogClassificationProject/Model/Final_Model/deploy_model.tflite"
     interpreter = tf.lite.Interpreter(model_path=model_path)
     interpreter.allocate_tensors()  # Set up input and output tensors
     return interpreter  # Return ready-to-use model
