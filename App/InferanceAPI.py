@@ -171,7 +171,3 @@ async def predict(request: Request):
     image_bytes = await request.body()
     breed, confidence = image_to_label(image_bytes)
     return {"breed": breed, "confidence": confidence}
-
-hostname = socket.gethostname()
-ip_address = socket.gethostbyname(hostname)
-print(f'Please change URL variable in app code to: {ip_address}')
