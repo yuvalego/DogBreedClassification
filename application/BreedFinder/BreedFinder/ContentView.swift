@@ -146,7 +146,7 @@ func getAddress() -> String? {
 
 
 func predictBreedName(from image: UIImage) async -> String? {
-    let serverIP = "192.168.1.147"
+    let serverIP = "172.20.10.2"
     guard let imageData = image.jpegData(compressionQuality: 0.8),
           let url = URL(string: "http://\(serverIP):8000/predict") else {
         return nil
@@ -193,7 +193,7 @@ func getBreedInfo(_ breedName: String) -> BreedInfo? {
     return BreedInfo(breedName: breedInfo.general_info.Breed_name, categoryScores: categoryScores, fullDetail: breedInfo)
 }
 func getApiStatus() -> Bool {
-    let serverIP = "192.168.1.147" // ipconfig getifaddr en0
+    let serverIP = "172.20.10.2" // ipconfig getifaddr en0
     guard let url = URL(string: "http://\(serverIP):8000/") else {
         return false
     }
